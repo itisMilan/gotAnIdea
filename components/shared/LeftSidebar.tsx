@@ -23,13 +23,14 @@ function LeftSidebar() {
                             href={link.route}
                             key={link.label}
                             className={`leftsidebar_link  ${isActive && 'bg-primary-500'
-                                } `}>
+                                } text-white`}>
                                  
                             <Image
                                 src={link.imgURL}
                                 alt={link.label}
                                 width={24}
                                 height={24} />
+                                {link.label}
                        
                         </Link>
                     )
