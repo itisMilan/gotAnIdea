@@ -39,7 +39,7 @@ console.log(params)
                 Hello
                 <Comment
                     threadId={thread.id}
-                    currentUserImage={user?.imageUrl}
+                    currentUserImage={userInfo?.image}
                     currentUserId={JSON.stringify(userInfo._id)}
                 />
 
