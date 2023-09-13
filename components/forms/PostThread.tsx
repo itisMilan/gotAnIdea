@@ -34,7 +34,7 @@ function PostThread({ userId }: { userId: string }) {
         }
     }) 
     const onSubmit = async (values: z.infer<typeof ThreadValidation>) => {
-        console.log(userId)
+       
         await createThread({
             text: values.thread,
             author: userId,
@@ -63,7 +63,7 @@ function PostThread({ userId }: { userId: string }) {
                             <Textarea
                                 rows={15}
                                 
-                                {...field}
+                                {...field} 
                                 />
                         </FormControl>
                         <FormMessage />
