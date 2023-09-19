@@ -25,5 +25,5 @@ const communitySchema = new mongoose.Schema({
     ref:"user"
  } ]
 });
-const community = mongoose.models.community || mongoose.model("Community", communitySchema);
-export default community
+const Community = mongoose.models.Community || mongoose.model("Community", communitySchema);
+export default Community
