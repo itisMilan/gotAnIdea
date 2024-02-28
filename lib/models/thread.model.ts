@@ -21,6 +21,8 @@ const threadSchema = new mongoose.Schema({
   parentId: {
     type: String,
   },
+  isLiked: Boolean,
+  likedBy: [String],
   children: [
     {
       type: mongoose.Schema.Types.ObjectId,
@@ -31,4 +33,4 @@ const threadSchema = new mongoose.Schema({
 
 const Thread = mongoose.models.Thread || mongoose.model("Thread", threadSchema);
 
-export default Thread; 
+export default Thread;
