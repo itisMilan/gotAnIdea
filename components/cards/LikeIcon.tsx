@@ -12,8 +12,15 @@ userId:string
 function LikeIcon({threadId,userId}:likeProps) {
   const [isLiked,setIsLiked]=useState(false)
   async function handleLike(){
-    setIsLiked((prevLiked)=>!prevLiked);
-    await likeThread(threadId,userId)
+    try{
+      setIsLiked((prevLiked)=>!prevLiked);
+
+      await likeThread(threadId,userId)
+    }
+    catch{
+      setIsLiked((prevLiked)=>!prevLiked);
+      throw Error("Cannot like thread")
+    }
    }
     
   return (
